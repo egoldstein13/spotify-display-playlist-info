@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <title>Welcome!</title>
+    
+</head>
+<body>
+    <h1>Playlist Info</h1>
+    <!-- Displays Playlist Id and User Id that user typed in -->
+    <form id="newplaylist" action="/" method="get">
+        PlaylistId:
+        <input type="text" id="playlistid" name="playlistid" value= "<%= playlistid %>" readonly>
+        UserId:
+        <input type="text" id="userid" name="userid" value=" <%= userid %>" readonly>
+        <!-- Click button to get info for another playlist -->
+        <input type="submit" value="Select New Playlist">
+    </form>
+    <br><br>
+    <!-- Playlist information in a table format -->
+    <table>
+        <tr>
+            <th>Song Name</th>
+            <th>Artist(s)</th>
+            <th>Energy</th>
+            <th>Valence</th>
+            <th>Album Image</th>
+        </tr>
+    <% for(let i = 0; i < tracks.length; i++) { %>
+        <tr>
+            <td><%= tracks[i].name %></td>
+            <td><%= tracks[i].artists %></td>
+            <td><%= tracks[i].energy %></td>
+            <td><%= tracks[i].valence %></td>
+            <td><img src = <%= tracks[i].albumImage %> > </td>
+        </tr>
+    <% } %>
+    <table>
+</body>
+</html>
