@@ -8,13 +8,13 @@
     "debug": "node --debug server.js"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.20.1",
     "consolidate": "^0.15.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^5.0.1",
     "ejs": "^2.6.1",
-    "express": "~4.16.0",
+    "express": "~4.18.2",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
